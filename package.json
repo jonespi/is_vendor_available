@@ -1,0 +1,15 @@
+{
+  "name": "zerocater-test",
+  "version": "1.0.0",
+  "description": "Take Home Eval",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Jonathan Espinosa",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.0"
+  }
+}
