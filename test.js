@@ -2,7 +2,7 @@ const { expect } = require('chai');
 const { is_vendor_available } = require('./main');
 
 describe('#is_vendor_available()', function() {
-  it('should return true if outside of the backout time', () => {
+  it('should return true if outside of the blackout time', () => {
     expect(is_vendor_available(1, '2017-01-02 14:30:00')).to.be.eql(true);
     expect(is_vendor_available(1, '2017-01-01 15:30:00')).to.be.eql(true);
     expect(is_vendor_available(1, '2017-01-01 15:15:00')).to.be.eql(true);
@@ -18,7 +18,7 @@ describe('#is_vendor_available()', function() {
     expect(is_vendor_available(2, '2017-01-01 18:30:00')).to.be.eql(true);
   });
 
-  it('should return false when only one driver and input is within the blackout range', () => {
+  it('should return false when only one driver and input is within the blackout time', () => {
     expect(is_vendor_available(1, '2017-01-01 13:39:00')).to.be.eql(false);
     expect(is_vendor_available(1, '2017-01-01 13:15:00')).to.be.eql(false);
     expect(is_vendor_available(1, '2017-01-01 14:15:00')).to.be.eql(false);
